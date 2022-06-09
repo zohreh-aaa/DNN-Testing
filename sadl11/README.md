@@ -1,8 +1,8 @@
 >This is a modified version of Suprised adequacy code to work with new models and datasets.
 
 Code release of a paper ["Guiding Deep Learning System Testing using Surprise Adequacy"](https://arxiv.org/abs/1808.08444)
-Code from (https://github.com/coinse/sadl).
-```
+Code from [Kim et al](https://github.com/coinse/sadl).
+
 
 ## Introduction
 
