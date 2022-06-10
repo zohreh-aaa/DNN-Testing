@@ -89,9 +89,11 @@ _**2- RQ2: How does diversity relate to fault detection?**_
 Based on a similar approach in the literature [4] and [5], we group mispredicted inputs with similar characteristics that are plausible causes of mispredictions. In such a clustering we can approximate the number of faults in a DNN. Despite the fact that many mispredicted test inputs are redundant and represent the same reasons, we assume that those belonging to distinct clusters are due to different problems in the DNN model.
 
 In our paper, We rely on counting faults instead of calculating misprediction rate since this is misleading in the context of testing the models
-(See figure 2). <p align="Left" width="40%">
+(See figure 2). <p align="center" width="40%">
     <img width="40%" src="https://user-images.githubusercontent.com/58783738/173091865-57e42a4c-6031-465e-abb7-23460615554a.png"> 
 </p>
+
+
 
 
 Below is the workflow of our method for fault definition in DNNs.
