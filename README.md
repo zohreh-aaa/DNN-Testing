@@ -16,13 +16,7 @@ Our main contributions are:
 3- Comparing existing coverage metrics (LSC,DSC, NC, KMNC, TKNC, NBS, SNAC) with diversity metrics in terms of computation time and fault detection abilities 
 
 
-DNNs faults are determined and saved for six different combinations of models & datasets (LeNet1 & MNIST, LeNet5 & MNIST, LeNet4 & Fashion_mnist, 12_Conv_layer & cifar10, LeNet5 & SVHN, ResNet20 & cifar10).
-
-In our paper, We rely on counting faults instead of calculating misprediction rate since this is misleading in the context of testing the models (See paper figure 2).
-Below is the workflow of our method for fault definition in DNNs.
-![image](https://user-images.githubusercontent.com/58783738/146591442-346cd4ec-44e7-4933-ac08-6e991f78eef8.png)
-
-
+DNNs' faults are determined and saved for six different combinations of models & datasets (LeNet1 & MNIST, LeNet5 & MNIST, LeNet4 & Fashion_mnist, 12_Conv_layer & cifar10, LeNet5 & SVHN, ResNet20 & cifar10).
 
 * [sadl11](sadl11/) folder contains some parts of [1] for computing the LSC and DSC coverage metrics and pre-trained models.
 
@@ -90,6 +84,37 @@ _**1- RQ1: To what extent are the selected diversity metrics measuring actual di
 
 
 _**2- RQ2: How does diversity relate to fault detection?**_
+***2.1 Estimating faults in DNNs:
+
+Based on a similar approach in the literature [4] and [5], we group mispredicted inputs with similar characteristics that are plausible causes of mispredictions. In such a clustering we can approximate the number of faults in a DNN. Despite the fact that many mispredicted test inputs are redundant and represent the same reasons, we assume that those belonging to distinct clusters are due to different problems in the DNN model.
+
+In our paper, We rely on counting faults instead of calculating misprediction rate since this is misleading in the context of testing the models (See figure 2).
+
+![Screenshot (356)](https://user-images.githubusercontent.com/58783738/173091865-57e42a4c-6031-465e-abb7-23460615554a.png)
+
+Below is the workflow of our method for fault definition in DNNs.
+![image](https://user-images.githubusercontent.com/58783738/146591442-346cd4ec-44e7-4933-ac08-6e991f78eef8.png)
+
+***2.2 Fault Validation
+
+in our work, we follow a finer-grained validation method which aims at proving that (1) inputs in the same cluster tend to be mispredicted due to the same fault, and (2) inputs belonging to different clusters are mispredicted because of distinct faults.
+
+Not in the paper:
+Dataset:Fashion-Mnist    Model: LeNet4
+
+| Model Faults Ci| Accuracy on the 15% of cluster Ci | Average Accuracy on the other clusters Cj (j≠i) |
+| :-------------:|:---------------------------------:| :-----------------------------------------------:|
+| Cluster 1 | 	74%   | 31%  |
+| Cluster 2 |83.5%|33%|
+|Cluster 3|	50%	|32%|
+|Cluster 4|	48%|	33%|
+|Cluster 5|	49%|	31%|
+|Cluster 6|	70%|	31%|
+|Cluster 7|	57%|	32%|
+|Cluster 8|	55%|	31%|
+|Cluster 9|	51%|	33%|
+|Cluster 10|	60%|	32%|
+
 
 *We aim to study whether higher diversity results in better fault detection. For this purpose, we randomly select, with replacement, 60 samples of sizes 100, 200, 300, 400, 1000. For each sample, we calculate the diversity scores and the number of faults. Finally, we calculate the correlation between diversity scores and the number of faults.*
 
@@ -102,9 +127,9 @@ _**3- RQ3: How does coverage relate to fault detection?**_
 
 -->Outcome: In general, there is no significant correlation between DNN coverage and faults for the natural dataset. LSC coverage showed a moderate positive correlation in only one configuration.
 
-(RQ2 and RQ3 results)
+(RQ2 and RQ3 results for -> Dataset: SVHN      ,     Model: LeNet-5)
 
-![image](https://user-images.githubusercontent.com/58783738/146563862-579f5227-450d-432d-a1ae-9c27c10f1781.png)
+![Screenshot (355)](https://user-images.githubusercontent.com/58783738/173086712-b7280a29-9fcc-4988-9294-d2b65251a677.png)
 
 
 _**4- RQ4: How do diversity and coverage metrics perform in terms of computation time?**_
@@ -139,9 +164,7 @@ Notes
 
 1- We used the same recommended settings of LSC and DSC hyperparameters (upper bound, lower bound, number of buckets, etc.) as in the original paper for the different models and datasets in our experiments.
 
-2- For the LeNet1 model, we use the same setting as the LeNet5 model.
-
-3- For speed-up, you can use GPU-based TensorFlow by changing the Colab Runtime.
+2- For speed-up, you can use GPU-based TensorFlow by changing the Colab Runtime.
 
 References
 -----
@@ -149,3 +172,8 @@ References
 
 2- [DBCV](https://github.com/christopherjenness/DBCV)
 
+3- [Revisiting Neuron Coverage Metrics and Quality of Deep Neural Networks]("https://github.com/soarsmu/Revisiting_Neuron_Coverage/blob/master/Correlation/coverage.py)
+
+4- [Supporting deep neural network safety analysis and retraining](https://www.researchgate.net/publication/339015259_Supporting_DNN_Safety_Analysis_and_Retraining_through_Heatmap-based_Unsupervised_Learning)
+
+5- [Black-box Safety Analysis and Retraining of DNNs based on Feature Extraction and Clustering](https://www.semanticscholar.org/paper/Black-box-Safety-Analysis-and-Retraining-of-DNNs-on-Attaoui-Fahmy/a29c208751555a4c2d4874070b8555fc53e5a414)
