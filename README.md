@@ -173,7 +173,7 @@ References
 
 2- [DBCV](https://github.com/christopherjenness/DBCV)
 
-3- [Revisiting Neuron Coverage Metrics and Quality of Deep Neural Networks]("https://github.com/soarsmu/Revisiting_Neuron_Coverage/blob/master/Correlation/coverage.py)
+3- [Revisiting Neuron Coverage Metrics and Quality of Deep Neural Networks](https://github.com/soarsmu/Revisiting_Neuron_Coverage/blob/master/Correlation/coverage.py)
 
 4- [Supporting deep neural network safety analysis and retraining](https://www.researchgate.net/publication/339015259_Supporting_DNN_Safety_Analysis_and_Retraining_through_Heatmap-based_Unsupervised_Learning)
 
