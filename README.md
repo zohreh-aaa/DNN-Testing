@@ -101,7 +101,9 @@ Below is the workflow of our method for fault definition in DNNs.
 
 in our work, we follow a finer-grained validation method which aims at proving that (1) inputs in the same cluster tend to be mispredicted due to the same fault, and (2) inputs belonging to different clusters are mispredicted because of distinct faults.
 Results:
-![Screenshot (362)](https://user-images.githubusercontent.com/58783738/173116107-e206f780-7a82-4a03-811c-890e83f67609.png)
+<p align="Left" width="50%">
+    <img width="50%" src="https://user-images.githubusercontent.com/58783738/173116107-e206f780-7a82-4a03-811c-890e83f67609.png"> 
+</p>
 
 
 _**2- RQ2: How does diversity relate to fault detection?**_
@@ -134,7 +136,9 @@ Model:  Resnet20
 
 Dataset: MNIST
 Model:  LeNet5
-![Screenshot (352)](https://user-images.githubusercontent.com/58783738/172949611-83082b46-ec9e-40ef-99b5-da982a85c174.png)
+<p align="Left" width="50%">
+    <img width="50%" src="https://user-images.githubusercontent.com/58783738/172949611-83082b46-ec9e-40ef-99b5-da982a85c174.png"> 
+</p>
 
 Note that Computation time of NBC and SNAC are the same as KMNC.
 
@@ -145,8 +149,9 @@ _**5- RQ5. How does diversity relate to coverage?**_
 
 *We want to study in this research question the relationship between diversity and coverage to assess if diverse input sets tend to increase the coverage of DNN models.*
 Example of results for Dataset: SVHN and Model: LeNet5
-![Screenshot (358)](https://user-images.githubusercontent.com/58783738/173103713-8ef17fa9-3976-47e7-9071-12a4c0ef9092.png)
-
+<p align="Left" width="50%">
+    <img width="50%" src="https://user-images.githubusercontent.com/58783738/173103713-8ef17fa9-3976-47e7-9071-12a4c0ef9092.png"> 
+</p>
 
 --> Outcome: In general, there is no significant correlation between diversity and coverage in DNN models.
 
