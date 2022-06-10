@@ -84,7 +84,8 @@ _**1- RQ1: To what extent are the selected diversity metrics measuring actual di
 
 
 _**2- RQ2: How does diversity relate to fault detection?**_
-***2.1 Estimating faults in DNNs:
+
+_***2.1 Estimating faults in DNNs**_
 
 Based on a similar approach in the literature [4] and [5], we group mispredicted inputs with similar characteristics that are plausible causes of mispredictions. In such a clustering we can approximate the number of faults in a DNN. Despite the fact that many mispredicted test inputs are redundant and represent the same reasons, we assume that those belonging to distinct clusters are due to different problems in the DNN model.
 
@@ -99,7 +100,7 @@ In our paper, We rely on counting faults instead of calculating misprediction ra
 Below is the workflow of our method for fault definition in DNNs.
 ![image](https://user-images.githubusercontent.com/58783738/146591442-346cd4ec-44e7-4933-ac08-6e991f78eef8.png)
 
-***2.2 Fault Validation
+_***2.2 Fault Validation**_
 
 in our work, we follow a finer-grained validation method which aims at proving that (1) inputs in the same cluster tend to be mispredicted due to the same fault, and (2) inputs belonging to different clusters are mispredicted because of distinct faults.
 
