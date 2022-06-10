@@ -106,7 +106,7 @@ Below is the workflow of our method for fault definition in DNNs.
     <img width="80%" src="https://user-images.githubusercontent.com/58783738/146591442-346cd4ec-44e7-4933-ac08-6e991f78eef8.png"> 
 </p>
 
-***2.2- Fault Validation***
+_*** 2.2- Fault Validation***_
 
 in our work, we follow a finer-grained validation method which aims at proving that (1) inputs in the same cluster tend to be mispredicted due to the same fault, and (2) inputs belonging to different clusters are mispredicted because of distinct faults.
 Results:
