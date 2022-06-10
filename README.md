@@ -42,7 +42,7 @@ Here is a documentation on how to use this replication package.
 
 ### Getting started
 
-1. First, you need to upload the repo on your Google drive and run the codes with https://colab.research.google.com/.
+1. First, you need to upload the repo on your Google drive and run the codes on [Google Colab](https://colab.research.google.com)
 2. The main code that you need to run is `Final Testing Experimnet.ipynb`. This code covers all the datasets and models that we used in the paper, however if you want to test the code on ther models and datasets which are not used in our paper, you need to change two lines of the code in `sadl11/run.py` that are related to the loading model and the selected layer. 
 To do so please:
 
@@ -88,9 +88,11 @@ _**2- RQ2: How does diversity relate to fault detection?**_
 
 Based on a similar approach in the literature [4] and [5], we group mispredicted inputs with similar characteristics that are plausible causes of mispredictions. In such a clustering we can approximate the number of faults in a DNN. Despite the fact that many mispredicted test inputs are redundant and represent the same reasons, we assume that those belonging to distinct clusters are due to different problems in the DNN model.
 
-In our paper, We rely on counting faults instead of calculating misprediction rate since this is misleading in the context of testing the models (See figure 2).
+In our paper, We rely on counting faults instead of calculating misprediction rate since this is misleading in the context of testing the models
+(See figure 2). <p align="Left" width="40%">
+    <img width="40%" src="https://user-images.githubusercontent.com/58783738/173091865-57e42a4c-6031-465e-abb7-23460615554a.png"> 
+</p>
 
-![Screenshot (356)](https://user-images.githubusercontent.com/58783738/173091865-57e42a4c-6031-465e-abb7-23460615554a.png)
 
 Below is the workflow of our method for fault definition in DNNs.
 ![image](https://user-images.githubusercontent.com/58783738/146591442-346cd4ec-44e7-4933-ac08-6e991f78eef8.png)
