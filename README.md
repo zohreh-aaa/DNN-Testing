@@ -121,8 +121,9 @@ _**3- RQ3: How does coverage relate to fault detection?**_
 
 Examples of RQ2 and RQ3 results  -->  Dataset: SVHN, Cifar10      ,     Model: LeNet-5  , ResNet20)
 
-![Screenshot (360)](https://user-images.githubusercontent.com/58783738/173116315-2fddb5b9-6077-4980-94e5-29322fe9e386.png)
-
+<p align="Left" width="80%">
+    <img width="80%" src="https://user-images.githubusercontent.com/58783738/173116315-2fddb5b9-6077-4980-94e5-29322fe9e386.png"> 
+</p>
 
 _**4- RQ4: How do diversity and coverage metrics perform in terms of computation time?**_
 
@@ -136,10 +137,8 @@ Model:  Resnet20
 
 Dataset: MNIST
 Model:  LeNet5
-<p align="Left" width="50%">
-    <img width="50%" src="https://user-images.githubusercontent.com/58783738/172949611-83082b46-ec9e-40ef-99b5-da982a85c174.png"> 
-</p>
 
+![Screenshot (360)](https://user-images.githubusercontent.com/58783738/172949611-83082b46-ec9e-40ef-99b5-da982a85c174.png)
 Note that Computation time of NBC and SNAC are the same as KMNC.
 
 --> Outcome: Both diversity and coverage metrics are not computationally expensive. However, in general GD  significantly outperforms coverage criteria. In application contexts, such as test case selection and minimization, based for example on search where we can expect to perform many test set evaluations, this difference can become practically significant. 
