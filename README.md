@@ -82,44 +82,29 @@ _**1- RQ1: To what extent are the selected diversity metrics measuring actual di
 
 -->Outcome:  GD and STD showed good performance in measuring actual data diversity in all the studied datasets. This is not the case of NCD, which we exclude from the following experiments.
 
+_**Required section for RQ2 and RQ3**_
 
-_**2- RQ2: How does diversity relate to fault detection?**_
-
-_***2.1 Estimating faults in DNNs**_
+_***Estimating faults in DNNs:***_
 
 Based on a similar approach in the literature [4] and [5], we group mispredicted inputs with similar characteristics that are plausible causes of mispredictions. In such a clustering we can approximate the number of faults in a DNN. Despite the fact that many mispredicted test inputs are redundant and represent the same reasons, we assume that those belonging to distinct clusters are due to different problems in the DNN model.
 
 In our paper, We rely on counting faults instead of calculating misprediction rate since this is misleading in the context of testing the models
-(See figure 2). <p align="center" width="40%">
+(See figure 2). <p align="Left" width="40%">
     <img width="40%" src="https://user-images.githubusercontent.com/58783738/173091865-57e42a4c-6031-465e-abb7-23460615554a.png"> 
 </p>
 
-
-
-
 Below is the workflow of our method for fault definition in DNNs.
+
 ![image](https://user-images.githubusercontent.com/58783738/146591442-346cd4ec-44e7-4933-ac08-6e991f78eef8.png)
 
-_***2.2 Fault Validation**_
+***Fault Validation***
 
 in our work, we follow a finer-grained validation method which aims at proving that (1) inputs in the same cluster tend to be mispredicted due to the same fault, and (2) inputs belonging to different clusters are mispredicted because of distinct faults.
+Results:
+![Screenshot (362)](https://user-images.githubusercontent.com/58783738/173116107-e206f780-7a82-4a03-811c-890e83f67609.png)
 
-Not in the paper:
-Dataset:Fashion-Mnist    Model: LeNet4
 
-| Model Faults Ci| Accuracy on the 15% of cluster Ci | Average Accuracy on the other clusters Cj (j≠i) |
-| :-------------:|:---------------------------------:| :-----------------------------------------------:|
-| Cluster 1 | 	74%   | 31%  |
-| Cluster 2 |83.5%|33%|
-|Cluster 3|	50%	|32%|
-|Cluster 4|	48%|	33%|
-|Cluster 5|	49%|	31%|
-|Cluster 6|	70%|	31%|
-|Cluster 7|	57%|	32%|
-|Cluster 8|	55%|	31%|
-|Cluster 9|	51%|	33%|
-|Cluster 10|	60%|	32%|
-
+_**2- RQ2: How does diversity relate to fault detection?**_
 
 *We aim to study whether higher diversity results in better fault detection. For this purpose, we randomly select, with replacement, 60 samples of sizes 100, 200, 300, 400, 1000. For each sample, we calculate the diversity scores and the number of faults. Finally, we calculate the correlation between diversity scores and the number of faults.*
 
@@ -132,9 +117,9 @@ _**3- RQ3: How does coverage relate to fault detection?**_
 
 -->Outcome: In general, there is no significant correlation between DNN coverage and faults for the natural dataset. LSC coverage showed a moderate positive correlation in only one configuration.
 
-(RQ2 and RQ3 results for -> Dataset: SVHN      ,     Model: LeNet-5)
+Examples of RQ2 and RQ3 results  -->  Dataset: SVHN, Cifar10      ,     Model: LeNet-5  , ResNet20)
 
-![Screenshot (355)](https://user-images.githubusercontent.com/58783738/173086712-b7280a29-9fcc-4988-9294-d2b65251a677.png)
+![Screenshot (360)](https://user-images.githubusercontent.com/58783738/173116315-2fddb5b9-6077-4980-94e5-29322fe9e386.png)
 
 
 _**4- RQ4: How do diversity and coverage metrics perform in terms of computation time?**_
@@ -159,7 +144,7 @@ Note that Computation time of NBC and SNAC are the same as KMNC.
 _**5- RQ5. How does diversity relate to coverage?**_
 
 *We want to study in this research question the relationship between diversity and coverage to assess if diverse input sets tend to increase the coverage of DNN models.*
-
+Example of results for Dataset: SVHN and Model: LeNet5
 ![Screenshot (358)](https://user-images.githubusercontent.com/58783738/173103713-8ef17fa9-3976-47e7-9071-12a4c0ef9092.png)
 
 
