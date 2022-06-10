@@ -155,7 +155,8 @@ _**5- RQ5. How does diversity relate to coverage?**_
 
 *We want to study in this research question the relationship between diversity and coverage to assess if diverse input sets tend to increase the coverage of DNN models.*
 
-![image](https://user-images.githubusercontent.com/58783738/146586359-b531c770-354e-4941-a6d5-8006b5f1dcb5.png)
+![Screenshot (358)](https://user-images.githubusercontent.com/58783738/173103713-8ef17fa9-3976-47e7-9071-12a4c0ef9092.png)
+
 
 --> Outcome: In general, there is no significant correlation between diversity and coverage in DNN models.
 
