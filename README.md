@@ -146,12 +146,18 @@ Model:  Resnet20
 
 ![cifar10res](https://user-images.githubusercontent.com/58783738/172948607-c090de7b-ffa1-485d-9e68-118e87f3a8e1.png)
 
+![Final_Cifar_time](https://user-images.githubusercontent.com/58783738/190036765-0ad650e9-827d-4483-8f9b-e76039f26203.jpg)
+
 
 Dataset: MNIST
 
 Model:  LeNet5
 
 ![Screenshot (360)](https://user-images.githubusercontent.com/58783738/172949611-83082b46-ec9e-40ef-99b5-da982a85c174.png)
+
+
+![final_mnist_time](https://user-images.githubusercontent.com/58783738/190036793-5e633d84-6535-4d4e-ae7d-c4d68bee1d6d.jpg)
+
 Note that Computation time of NBC and SNAC are the same as KMNC.
 
 --> Outcome: Both diversity and coverage metrics are not computationally expensive. However, in general GD  significantly outperforms coverage criteria. In application contexts, such as test case selection and minimization, based for example on search where we can expect to perform many test set evaluations, this difference can become practically significant. 
